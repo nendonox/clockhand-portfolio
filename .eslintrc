@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "comma-dangle": 0,
+    "max-len": ["error", 140],
+    "brace-style": [2, "1tbs", {"allowSingleLine": true}]
+  },
+  "globals": {
+    "_": true,
+    "angular": true,
+    "cartesian": true,
+    "document": true,
+    "Worker": true
+  }
+}
