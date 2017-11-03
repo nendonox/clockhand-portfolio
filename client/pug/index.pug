@@ -10,12 +10,8 @@ html(ng-app="app")
     script(src="./scripts/main.js")
   body.main-container(ng-controller="IndexCtrl as ctrl")
     .serif(style="text-align: center; font-weight: bold; font-size: 4vh; margin: 24px 0;") The Realm of Complexity
-    .sans-serif(style="text-align: center; font-size: 2vh;") clockhand.net is under the control of The Realm of Complexity, but anyone can browse it. The hands of the clock indicate {{ ctrl.svgLabel }}.
+    .sans-serif(style="text-align: center; font-size: 2vh;") ({{ ctrl.svgLabel }})
     div#clock
       div(ng-repeat="gear in ctrl.gears", ng-style="gear.style", style="margin: 0; padding: 0; position: absolute;")
         svg(ng-attr-width="{{ ::gear.style.width }}px", ng-attr-height="{{ ::gear.style.height }}px", overflow="visible")
           path(ng-attr-d="{{ ::gear.d }}", fill="{{ ::gear.fill }}", fill-rule="evenodd", fill-opacity="0.6")
-          // defs(ng-if="gear.text")
-          //   path(id="titlePath", ng-attr-d="{{ ::gear.textPathD }}")
-          // text
-          //   textPath(ng-if="gear.text", xlink:href="#titlePath") {{ ::gear.text }}
